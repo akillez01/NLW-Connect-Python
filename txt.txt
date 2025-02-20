@@ -51,4 +51,20 @@ fg %1
 exit
 ```
 
-Essa sequência deve ajudá-lo a manter um fluxo de trabalho organizado ao usar ambientes virtuais Python.
+Essa sequência deve ajudá-lo a manter um fluxo de trabalho organizado ao usar ambientes virtuais Python.PYTHONPATH=src pytest -s -v src/model/repositories/subscribers_repository_test.py
+
+
+PYTHONPATH=src pytest -s -v src/model/repositories/subscribers_repository_test.py
+
+
+pytest -s -v src/model/repositories/subscribers_repository_test.py
+
+
+
+pip3 install pytest
+pip3 freeze > requirements.txt
+
+
+python3
+import sqlite3
+sqlite3.connect('schema.db')
