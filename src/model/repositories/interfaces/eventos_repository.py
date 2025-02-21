@@ -1,4 +1,4 @@
-from adb import ABC, abstractmethod
+from abc import ABC, abstractmethod
 from src.model.entities.eventos import Eventos
 
 class EventosRepositoryInterface(ABC):

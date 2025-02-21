@@ -1,12 +1,11 @@
 from cerberus import Validator
-from src.http_types.http_response import HttpResponse
 
-def events_creator_validator(request: any) -> HttpResponse:
+def events_creator_validator(request: any):
     body_validator = Validator({
         "data": {
             "type": "dict",
             "schema": {
-                "name": {"type": "string", "required": True, "empty": False},
+                "name": {"type": "string", "required": True, "empty": False}
             }
         }
     })
@@ -14,5 +13,5 @@ def events_creator_validator(request: any) -> HttpResponse:
     response = body_validator.validate(request.json)
   
     if response is False:
-        print(body_validator.errors)
+        raise Exception(body_validator.errors)
     
