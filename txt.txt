@@ -68,3 +68,22 @@ pip3 freeze > requirements.txt
 python3
 import sqlite3
 sqlite3.connect('schema.db')
+
+Para parar os processos Python que estão escutando na porta 3000, você pode usar o comando `kill` com os PIDs dos processos. Aqui estão os comandos para parar esses processos:
+
+```sh
+kill 210890
+kill 233702
+```
+
+Se você quiser garantir que todos os processos Python que estão escutando na porta 3000 sejam parados, você pode usar o seguinte comando:
+
+```sh
+fuser -k 3000/tcp
+```
+
+Isso irá matar todos os processos que estão usando a porta 3000.
+fuser -k 3000/tcp
+
+kill 210890
+kill 233702
